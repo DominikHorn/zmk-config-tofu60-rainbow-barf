@@ -5,9 +5,46 @@
 #include <dt-bindings/zmk/backlight.h>
 
 / {
+	macros {
+		umlautu: zed_em_kay {
+			label = "umlautu";
+		 	compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_press &kp RALT>
+				, <&macro_tap &kp U>
+				, <&macro_release &kp RALT>
+				, <&macro_tap &kp U>
+				, 
+			;
+		};
+		umlauta: zed_em_kay {
+			label = "umlautu";
+		 	compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_press &kp RALT>
+				, <&macro_tap &kp U>
+				, <&macro_release &kp RALT>
+				, <&macro_tap &kp A>
+				, 
+			;
+		};
+		umlauto: zed_em_kay {
+			label = "umlautu";
+		 	compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_press &kp RALT>
+				, <&macro_tap &kp U>
+				, <&macro_release &kp RALT>
+				, <&macro_tap &kp O>
+				, 
+			;
+		};
+	};
 	keymap {
 		compatible = "zmk,keymap";
-
 		default_layer {
 				// ------------------------------------------------------------------------------------------
 				// |  `  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP | DEL
@@ -28,15 +65,15 @@
 		raise {
 				// ------------------------------------------------------------------------------------------
 				// |  ~  | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 | F11 | F12 |     |    
-				// |     |     |     |     |     |     |     |     |     |     |     |     |     |    
-				// |       |     | RGB_EFF | RGB_SPDD | RGB_SPDI |     | <- |  v  |  ^  | -> |     |     |    
+				// |     |     |     |     |     |     |     |  Ü  |     |  Ö  |     |     |     |    
+				// |       |  Ä  | RGB_EFF | RGB_SPDD | RGB_SPDI |     | <- |  v  |  ^  | -> |     |     |    
 				// |        | RGB_TOG | RGB_BRD | RGB_BRI | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI |     |     |     |     
 				// | BT_CLR |     |     |                                |     |     |       |  
 				// ------------------------------------------------------------------------------------------
 			bindings = <
 				&kp GRAVE   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &kp F11   &kp F12   &trans &bt BT_CLR
-				&trans   &kp GRAVE   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
-				&trans   &trans   &rgb_ug RGB_EFF   &rgb_ug RGB_SPD   &rgb_ug RGB_SPI   &trans   &kp LEFT_ARROW   &kp DOWN_ARROW   &kp UP_ARROW   &kp RIGHT_ARROW   &trans   &trans   &trans
+				&trans   &trans   &trans   &trans   &trans   &trans   &trans   &umlautu  &trans   &umlauto   &trans   &trans   &trans   &trans
+				&trans   &umlauta   &rgb_ug RGB_EFF   &rgb_ug RGB_SPD   &rgb_ug RGB_SPI   &trans   &kp LEFT_ARROW   &kp DOWN_ARROW   &kp UP_ARROW   &kp RIGHT_ARROW   &trans   &trans   &trans
 				&trans   &rgb_ug RGB_TOG   &rgb_ug RGB_BRD   &rgb_ug RGB_BRI   &rgb_ug RGB_HUD   &rgb_ug RGB_HUI   &rgb_ug RGB_SAD   &rgb_ug RGB_SAI   &trans   &trans   &trans   &trans
 				&trans &trans   &trans   &trans   &trans   &trans   &reset   &bootloader
 			>;
