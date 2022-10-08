@@ -15,7 +15,6 @@
 				, <&macro_tap &kp U>
 				, <&macro_release &kp RALT>
 				, <&macro_tap &kp U>
-				, 
 			;
 		};
 		umlauta: zed_em_kay {
@@ -27,7 +26,6 @@
 				, <&macro_tap &kp U>
 				, <&macro_release &kp RALT>
 				, <&macro_tap &kp A>
-				, 
 			;
 		};
 		umlauto: zed_em_kay {
@@ -39,7 +37,6 @@
 				, <&macro_tap &kp U>
 				, <&macro_release &kp RALT>
 				, <&macro_tap &kp O>
-				, 
 			;
 		};
 	};
