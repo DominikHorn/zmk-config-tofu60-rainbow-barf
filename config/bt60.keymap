@@ -6,10 +6,11 @@
 
 / {
 	macros {
-		umlautu: zed_em_kay {
+		umlautu: umlautu {
 			label = "umlautu";
 		 	compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
+			wait-ms = <1>;
 			bindings
 				= <&macro_press &kp RALT>
 				, <&macro_tap &kp U>
@@ -17,10 +18,11 @@
 				, <&macro_tap &kp U>
 			;
 		};
-		umlauta: zed_em_kay {
+		umlauta: umlauta {
 			label = "umlautu";
 		 	compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
+			wait-ms = <1>;
 			bindings
 				= <&macro_press &kp RALT>
 				, <&macro_tap &kp U>
@@ -28,10 +30,11 @@
 				, <&macro_tap &kp A>
 			;
 		};
-		umlauto: zed_em_kay {
+		umlauto: umlauto {
 			label = "umlautu";
 		 	compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
+			wait-ms = <1>;
 			bindings
 				= <&macro_press &kp RALT>
 				, <&macro_tap &kp U>
