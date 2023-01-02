@@ -25,6 +25,8 @@ CONFIG_FLASH_MAP=y
 
 # General
 CONFIG_ZMK_IDLE_TIMEOUT=60000
+CONFIG_ZMK_SLEEP=y # Enable deep sleep support
+CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=900000 # Milliseconds of inactivity before entering deep sleep
 
 # Encoder
 CONFIG_EC11=n
