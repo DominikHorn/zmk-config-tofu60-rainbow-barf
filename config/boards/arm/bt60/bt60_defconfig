@@ -52,4 +52,6 @@ CONFIG_ZMK_RGB_UNDERGLOW_EFF_START=1
 # Idling behaviour
 # CONFIG_ZMK_IDLE_TIMEOUT=30000
 # #CONFIG_ZMK_RGB_UNDERGLOW_AUTO_OFF_USB=y
+# #CONFIG_ZMK_SLEEP=y # Enable deep sleep support
+# #CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=900000 # Milliseconds of inactivity before entering deep sleep
 # CONFIG_ZMK_RGB_UNDERGLOW_AUTO_OFF_IDLE=y
